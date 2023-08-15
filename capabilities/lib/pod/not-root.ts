@@ -31,7 +31,7 @@ export function mutatePodForNonRoot(
 
     if (
       pod.spec.securityContext.fsGroup &&
-      pod.spec.securityContext.fsGroup <= 0
+      pod.spec.securityContext?.fsGroup <= 0
     ) {
       pod.spec.securityContext.fsGroup = runAsGroup;
     }
